@@ -7,16 +7,14 @@ TablePog PogTable;
 void setup() {
   fullScreen(); //displayWidth, displayHeight
   noStroke();
- // geometryCheck();
+  //PogTable.geometryCheck(displayWidth, displayHeight);
   ball = new BallPog(displayWidth, displayHeight);
   PogTable = new TablePog(displayWidth, displayHeight);
-  
 }
 
 void draw() {
+  PogTable.draw();
   ball.draw();
-  
-  
 }
 
 // void keyPressed() {}
