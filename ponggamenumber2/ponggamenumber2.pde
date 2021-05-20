@@ -1,20 +1,21 @@
 
 
 BallPog ball;
+TablePog PogTable;
 //global variables
 
 void setup() {
   fullScreen(); //displayWidth, displayHeight
-  background(0);
   noStroke();
  // geometryCheck();
   ball = new BallPog(displayWidth, displayHeight);
-  //ball = new tablePog();
+  PogTable = new TablePog(displayWidth, displayHeight);
   
 }
 
 void draw() {
   ball.draw();
+  
   
 }
 
