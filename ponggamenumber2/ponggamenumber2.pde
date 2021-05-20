@@ -2,6 +2,8 @@
 
 BallPog ball;
 TablePog PogTable;
+PaddlePog paddle;
+boardScore scoreBoard;
 //global variables
 
 void setup() {
@@ -10,11 +12,14 @@ void setup() {
   //PogTable.geometryCheck(displayWidth, displayHeight);
   ball = new BallPog(displayWidth, displayHeight);
   PogTable = new TablePog(displayWidth, displayHeight);
+  paddle = new PaddlePog(displayWidth, displayHeight);
 }
 
 void draw() {
   PogTable.draw();
   ball.draw();
+  paddle.draw();
+  scoreBoard.draw();
 }
 
 // void keyPressed() {}
