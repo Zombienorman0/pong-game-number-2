@@ -23,12 +23,12 @@ class TablePog {
 
   void darkModeButton() {
     if (key == 'r' || key == 'R') {
-      background(#FFFFFF);
+      background(#2AD833);
       fill(0);
       scoreArea();
     } else if (key == 't' || key == 'T') {
       background(0);
-      fill(#FFFFFF);
+      fill(#2AD833);
       scoreArea();
     }
   }
