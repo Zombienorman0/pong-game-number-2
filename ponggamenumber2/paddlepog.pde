@@ -1,8 +1,7 @@
 
 
 class PaddlePog {
-  
-  
+
 
 
   PaddlePog (int displayWidth, int displayHeight) {
@@ -24,10 +23,9 @@ class PaddlePog {
 
 
   void paddleMovement() {
-    /*if (key == UP) {
-       += 2;
+    if (key == UP) {
+      
     } else if (key == DOWN) {
-       += 2;
-    }*/
+    }
   }
 }

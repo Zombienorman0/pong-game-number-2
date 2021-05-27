@@ -17,19 +17,25 @@ class TablePog {
   }
 
   void draw() {
-    background(0);
+    background(#2AD833);
     darkModeButton();
   }
 
   void darkModeButton() {
     if (key == 'r' || key == 'R') {
       background(#2AD833);
-      fill(0);
+      fill(#054309);
       scoreArea();
+      noFill();
+      fill(#FFFFFF);
+      extraDesign();
     } else if (key == 't' || key == 'T') {
-      background(0);
+      background(#054309);
       fill(#2AD833);
       scoreArea();
+      noFill();
+      fill(#7F897F);
+      extraDesign();
     }
   }
   void scoreArea() {
@@ -37,8 +43,19 @@ class TablePog {
     rect(1890, 1/20, 30, 1100);
   }
 
-
-  void scoreAreaP2() {
-    //if() {}
+  void extraDesign() {
+    //around the scoreBoard();
+    rect(775, 150, 100, 30);
+    rect(750, 25, 30, 100);
+    rect(1075, 150, 100, 30);
+    rect(1175, 25, 30, 100);
+    //lines down the middle
+    rect(960, 25, 30, 100);
+    rect(960, 200, 30, 100);
+    rect(960, 350, 30, 100);
+    rect(960, 500, 30, 100);
+    rect(960, 650, 30, 100);
+    rect(960, 800, 30, 100);
+    rect(960, 950, 30, 100);
   }
 }
