@@ -8,9 +8,14 @@ class boardScore {
 
 
   void draw () {
-    actualScore();
   }
 
   void actualScore() {
+    textSize(50);
+    text('0', 850, 100);
+  }
+  void actualScore2() {
+    textSize(50);
+    text('0', 1075, 100);
   }
 }

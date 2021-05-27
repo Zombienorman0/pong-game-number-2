@@ -29,6 +29,12 @@ class TablePog {
       noFill();
       fill(#FFFFFF);
       extraDesign();
+      noFill();
+      fill(#13589B);
+      scoreBoard.actualScore();
+      noFill();
+      fill(#AF1320);
+      scoreBoard.actualScore2();
     } else if (key == 't' || key == 'T') {
       background(#054309);
       fill(#2AD833);
@@ -36,6 +42,12 @@ class TablePog {
       noFill();
       fill(#7F897F);
       extraDesign();
+      noFill();
+      fill(#4679AA);
+      scoreBoard.actualScore();
+      noFill();
+      fill(#D32231);
+      scoreBoard.actualScore2();
     }
   }
   void scoreArea() {
