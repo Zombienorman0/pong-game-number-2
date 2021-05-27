@@ -1,6 +1,3 @@
-
-
-
 class TablePog {
 
 
@@ -27,8 +24,21 @@ class TablePog {
   void darkModeButton() {
     if (key == 'r' || key == 'R') {
       background(#FFFFFF);
+      fill(0);
+      scoreArea();
     } else if (key == 't' || key == 'T') {
       background(0);
+      fill(#FFFFFF);
+      scoreArea();
     }
+  }
+  void scoreArea() {
+    rect(1/20, 1/20, 30, 1100);
+    rect(1890, 1/20, 30, 1100);
+  }
+
+
+  void scoreAreaP2() {
+    //if() {}
   }
 }

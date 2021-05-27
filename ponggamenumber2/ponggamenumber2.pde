@@ -1,5 +1,3 @@
-
-
 BallPog ball;
 TablePog PogTable;
 PaddlePog paddle;
@@ -13,6 +11,7 @@ void setup() {
   ball = new BallPog(displayWidth, displayHeight);
   PogTable = new TablePog(displayWidth, displayHeight);
   paddle = new PaddlePog(displayWidth, displayHeight);
+  scoreBoard = new boardScore(displayWidth, displayHeight);
 }
 
 void draw() {
