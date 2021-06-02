@@ -19,6 +19,7 @@ void draw() {
   ball.draw();
   paddle.draw();
   scoreBoard.draw();
+  //scoreBoard.retsrtgame();
 }
 
 // void keyPressed() {}

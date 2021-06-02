@@ -1,5 +1,3 @@
-
-
 class PaddlePog {
 
 
@@ -25,7 +23,6 @@ class PaddlePog {
 
   void paddleMovement() {
     if (key == UP) {
-      
     } else if (key == DOWN) {
     }
   }

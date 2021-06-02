@@ -1,5 +1,3 @@
-
-
 class BallPog {
   float x, y, diameterX, diameterY;//ball variables
   color ballColour, defaultColour = 0;
@@ -21,9 +19,7 @@ class BallPog {
 
   void draw() {
     movement();
-    fill(ballColour);
-    ellipse(x, y, diameterX, diameterY);
-    fill(defaultColour);
+    ballers();
   }
 
   void movement() {
@@ -38,4 +34,10 @@ class BallPog {
       yDirection *= -1;
     }
   }
-} 
+
+  void ballers() {
+    fill(ballColour);
+    ellipse(x, y, diameterX, diameterY);
+    fill(defaultColour);
+  }
+}  
