@@ -11,7 +11,7 @@ class boardScore {
     noFill();
     fill(#AF1320);
     actualScore2();
-    retsrtgame();
+    //retsrtgame();
     
   }
 
@@ -25,10 +25,6 @@ class boardScore {
     text('0', 1075, 100);
   }
 
-  void scoreScore() {
-    //if () {
-    //}
-  }
 
 
   void retsrtgame() {

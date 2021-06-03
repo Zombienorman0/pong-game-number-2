@@ -26,9 +26,9 @@ class TablePog {
   void darkModeButton() {
     if (key == 'r' || key == 'R') {
       background(#2AD833);
-      fill(#054309);
+      //fill(#054309);
       // scoreArea();
-      noFill();
+      //noFill();
       fill(#FFFFFF);
       extraDesign();
       noFill();
@@ -39,9 +39,9 @@ class TablePog {
       scoreBoard.actualScore2();
     } else if (key == 't' || key == 'T') {
       background(#054309);
-      fill(#2AD833);
+      //fill(#2AD833);
       //scoreArea();
-      noFill();
+      //noFill();
       fill(#7F897F);
       extraDesign();
       noFill();
@@ -59,13 +59,13 @@ class TablePog {
 
   void extraDesign() {
     //around the scoreBoard();
-    fill(#FFFFFF);
+    //fill(#FFFFFF);
     rect(775, 150, 100, 30);
     rect(750, 25, 30, 100);
     rect(1075, 150, 100, 30);
     rect(1175, 25, 30, 100);
     //lines down the middle
-    fill(#FFFFFF);
+    //fill(#FFFFFF);
     rect(960, 25, 30, 100);
     rect(960, 200, 30, 100);
     rect(960, 350, 30, 100);
