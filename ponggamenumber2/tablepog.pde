@@ -1,4 +1,4 @@
-class TablePog {
+public class TablePog {
   color GR = #7F897F;
   color W = #FFFFFF;
   color G = #2AD833;

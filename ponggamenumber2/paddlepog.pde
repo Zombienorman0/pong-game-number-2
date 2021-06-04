@@ -1,4 +1,4 @@
-class PaddlePog {
+public class PaddlePog {
   float x, y, diameterX, paddleY, PaddleX1, paddleX2, paddleSizeX, paddleSizeY;
   int xDirection = 1;
   int yDirection = 1;

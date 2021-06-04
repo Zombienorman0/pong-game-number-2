@@ -1,4 +1,4 @@
-class BallPog {
+private class BallPog {
   float x, y, diameterX, diameterY;//ball variables
   color ballColour, defaultColour = 0;
   float xSpeed = 2.8;
@@ -20,6 +20,7 @@ class BallPog {
   void draw() {
     movement();
     ballers();
+    scoreScore();
   }
 
   void movement() {

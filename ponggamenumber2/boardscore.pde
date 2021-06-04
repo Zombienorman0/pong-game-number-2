@@ -1,4 +1,4 @@
-class boardScore {
+public class boardScore {
 
 
   boardScore(int displayWidth, int displayHeight) {
