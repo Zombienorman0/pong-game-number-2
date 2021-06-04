@@ -34,7 +34,7 @@ class BallPog {
       yDirection *= -1;
     }
   }
-  
+
   void scoreScore() {
     //blue team
     //if () {

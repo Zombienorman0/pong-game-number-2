@@ -1,8 +1,15 @@
 class TablePog {
-
-
+  color GR = #7F897F;
+  color W = #FFFFFF;
+  color G = #2AD833;
+  color DG = #054309;
+  color B = #13589B;
+  color R = #AF1320;
   boolean darkMode;
-  TablePog(int displayWidth, int displayHeight) {
+  int RectWidth = 100;
+  int Rectheight = 30;
+  int RectPointX = 960;
+  TablePog(int displayWidth, int displayHeight ) {
   }
   void geometryCheck(int displayWidth, int displayHeight) {
     if (displayWidth >= displayHeight) {
@@ -18,38 +25,42 @@ class TablePog {
 
   void draw() {
     //
-    background(#2AD833);
+    background(DG);
+    fill(GR);
     extraDesign();
+    noFill();
     darkModeButton();
   }
 
   void darkModeButton() {
     if (key == 'r' || key == 'R') {
-      background(#2AD833);
+      background(G);
       //fill(#054309);
       // scoreArea();
       //noFill();
-      fill(#FFFFFF);
+      fill(W);
       extraDesign();
       noFill();
-      fill(#13589B);
+      fill(B);
       scoreBoard.actualScore();
       noFill();
-      fill(#AF1320);
+      fill(R);
       scoreBoard.actualScore2();
+      noFill();
     } else if (key == 't' || key == 'T') {
-      background(#054309);
+      background(DG);
       //fill(#2AD833);
       //scoreArea();
       //noFill();
-      fill(#7F897F);
+      fill(GR);
       extraDesign();
       noFill();
-      fill(#13589B);
+      fill(B);
       scoreBoard.actualScore();
       noFill();
-      fill(#AF1320);
+      fill(R);
       scoreBoard.actualScore2();
+      noFill();
     }
   }
   /*void scoreArea() {
@@ -60,18 +71,20 @@ class TablePog {
   void extraDesign() {
     //around the scoreBoard();
     //fill(#FFFFFF);
-    rect(775, 150, 100, 30);
-    rect(750, 25, 30, 100);
-    rect(1075, 150, 100, 30);
-    rect(1175, 25, 30, 100);
+
+    rect(775, 150, RectWidth, Rectheight);
+    rect(750, 25, Rectheight, RectWidth);
+    rect(1075, 150, RectWidth, Rectheight);
+    rect(1175, 25, Rectheight, RectWidth);
     //lines down the middle
     //fill(#FFFFFF);
-    rect(960, 25, 30, 100);
-    rect(960, 200, 30, 100);
-    rect(960, 350, 30, 100);
-    rect(960, 500, 30, 100);
-    rect(960, 650, 30, 100);
-    rect(960, 800, 30, 100);
-    rect(960, 950, 30, 100);
+    rect(RectPointX, 25, Rectheight, RectWidth);
+    rect(RectPointX, 200, Rectheight, RectWidth);
+    rect(RectPointX, 350, Rectheight, RectWidth);
+    rect(RectPointX, 500, Rectheight, RectWidth);
+    rect(RectPointX, 650, Rectheight, RectWidth);
+    rect(RectPointX, 800, Rectheight, RectWidth);
+    rect(RectPointX, 950, Rectheight, RectWidth);
+    //noFill();
   }
 }

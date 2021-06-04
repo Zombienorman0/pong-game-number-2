@@ -9,7 +9,7 @@ void setup() {
   noStroke();
   //PogTable.geometryCheck(displayWidth, displayHeight);
   ball = new BallPog(displayWidth, displayHeight);
-  PogTable = new TablePog(displayWidth, displayHeight);
+  PogTable = new TablePog( displayWidth,  displayHeight);
   paddle = new PaddlePog(displayWidth, displayHeight);
   scoreBoard = new boardScore(displayWidth, displayHeight);
 }
