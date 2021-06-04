@@ -1,46 +1,62 @@
 public class PaddlePog {
-  float x, y, diameterX, paddleY, PaddleX1, paddleX2, paddleSizeX, paddleSizeY;
-  int xDirection = 1;
-  int yDirection = 1;
-  float xSpeed = 2.8;
-  float ySpeed = 2.3;
+  int paddleY, PaddleX1, paddleX2, paddleSizeX, paddleSizeY, paddleSizeX1, paddleSizeY1, paddleSpeed;
 
 
   PaddlePog (int displayWidth, int displayHeight) {
-    x = displayWidth/2;
-    y = displayHeight/2;
-    diameterX = displayHeight/20;
+    /*x = displayWidth/2;
+     y = displayHeight/2;
+     diameterX = displayHeight/20;*/
     paddleY = 450;
     PaddleX1 = 35;
     paddleX2 = 1855;
     paddleSizeX = 30;
     paddleSizeY = 200;
+    paddleSizeX1 = 30;
+    paddleSizeY1 = 200;
+    paddleSpeed = 5;
   }
   void draw() {
-    //paddleMovement(); 
     paddleDesign();
   }
 
 
   void paddleDesign() {
     fill(#13589B);
-    rect(PaddleX1, paddleY, paddleSizeX, paddleSizeY);
+    paddleB();
     noFill();
     fill(#AF1320);
-    rect(paddleX2, paddleY, paddleSizeX, paddleSizeY);
+    paddleR();
     noFill();
     noStroke();
+  } 
+  void paddleB () {
+    rect(PaddleX1, paddleY, paddleSizeX, paddleSizeY);
   }
-
-
-  void paddleMovement() {
-    //red paddle
-    if (key == UP) {
-    } else if (key == DOWN) {
+  void paddleR () {
+    rect(paddleX2, paddleY, paddleSizeX1, paddleSizeY1);
+  }
+  void paddleMovementP1() {
+    paddleY-= paddleSpeed;
+    if ( paddleY <= 0) {
+      paddleY = 0;
     }
-    //blue paddle
-    if (key == 'w' || key == 'W') {
-    } else if (key == 's' || key == 'S') {
+  }
+  void paddleMovementP2() {
+    paddleY+= paddleSpeed;
+    if ( paddleY >= 1080 - paddleSizeY) {
+      paddleY = 1080 - paddleSizeY;
+    }
+  }
+  void paddleMovementP3() {
+    paddleY-= paddleSpeed;
+    if ( paddleY <= 0) {
+      paddleY = 0;
+    }
+  }
+  void paddleMovementP4() {
+    paddleY+= paddleSpeed;
+    if ( paddleY >= 1080 - paddleSizeY1) {
+      paddleY = 1080 - paddleSizeY1;
     }
   }
 }
