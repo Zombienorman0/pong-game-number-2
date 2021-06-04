@@ -14,7 +14,7 @@ void setup() {
   PogTable = new TablePog( displayWidth, displayHeight);
   paddle = new PaddlePog(displayWidth, displayHeight);
   scoreBoard = new boardScore(displayWidth, displayHeight);
-  //Paddles = new Leftpaddles(displayWidth, displayHeight);
+  
 }
 
 void draw() {

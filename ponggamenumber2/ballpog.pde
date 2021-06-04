@@ -2,7 +2,7 @@ private class BallPog {
   float x, y, diameterX, diameterY;//ball variables
   color ballColour, defaultColour = 0;
   float xSpeed = 2.8;
-  float ySpeed = 2.3;
+  float ySpeed = 2.8;
   int xDirection = 1;
   int yDirection = 1;
 
@@ -29,10 +29,10 @@ private class BallPog {
     y = y + ( ySpeed * yDirection );
 
     if (x > displayWidth - diameterX/2 || x < diameterX -20) {
-      xDirection *= -1;
+      xDirection *= +-1;
     }
     if (y > displayHeight - diameterY/2|| y < diameterY -20) {
-      yDirection *= -1;
+      yDirection *= +-1;
     }
   }
 
