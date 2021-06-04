@@ -22,7 +22,6 @@ void draw() {
   ball.draw();
   paddle.draw();
   scoreBoard.draw();
-  Paddles.draw();
   paddleMoveB();
   paddleMoveR();
   //scoreBoard.retsrtgame();
