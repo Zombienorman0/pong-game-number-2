@@ -10,15 +10,15 @@ void setup() {
   fullScreen(); //displayWidth, displayHeight
   noStroke();
   //PogTable.geometryCheck(displayWidth, displayHeight);
-  ball = new BallPog(displayWidth, displayHeight);
   PogTable = new TablePog( displayWidth, displayHeight);
+  ball = new BallPog(displayWidth, displayHeight);
   paddle = new PaddlePog(displayWidth, displayHeight);
   scoreBoard = new boardScore(displayWidth, displayHeight);
-  
 }
 
 void draw() {
-  PogTable.draw();
+  
+  PogTable.draw();//always has to be first 
   ball.draw();
   paddle.draw();
   scoreBoard.draw();

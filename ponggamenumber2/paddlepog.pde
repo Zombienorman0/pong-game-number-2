@@ -1,6 +1,6 @@
 public class PaddlePog {
-  int paddleY,paddleY1, PaddleX1, paddleX2, paddleSizeX, paddleSizeY, paddleSizeX1, paddleSizeY1, paddleSpeed;
-
+  int paddleY, paddleY1, PaddleX1, paddleX2, paddleSizeX, paddleSizeY, paddleSizeX1, paddleSizeY1, paddleSpeed;// paddle variables
+  float x, y, diameterX;//ball variables
 
   PaddlePog (int displayWidth, int displayHeight) {
     /*x = displayWidth/2;
@@ -15,12 +15,22 @@ public class PaddlePog {
     paddleSizeX1 = 30;
     paddleSizeY1 = 200;
     paddleSpeed = 5;
+
+    x = displayWidth/2;
+    y = displayHeight/2;
+    diameterX = displayHeight/20;
   }
   void draw() {
     paddleDesign();
+    ballPaddleBounce();
   }
 
-
+  void ballPaddleBounce() {
+    if (x > displayWidth - diameterX/2) {//
+    }
+    if (x < diameterX -20) {
+    }
+  }
   void paddleDesign() {
     fill(#13589B);
     paddleB();

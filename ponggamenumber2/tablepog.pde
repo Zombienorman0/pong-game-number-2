@@ -3,8 +3,6 @@ public class TablePog {
   color W = #FFFFFF;
   color G = #2AD833;
   color DG = #054309;
-  color B = #13589B;
-  color R = #AF1320;
   boolean darkMode;
   int RectWidth = 100;
   int Rectheight = 30;
@@ -24,15 +22,16 @@ public class TablePog {
   }
 
   void draw() {
-    //
     background(DG);
     fill(GR);
     extraDesign();
     noFill();
+    noLoop();
     darkModeButton();
   }
 
   void darkModeButton() {
+    loop();
     if (key == 'r' || key == 'R') {
       background(G);
       //fill(#054309);
@@ -41,12 +40,6 @@ public class TablePog {
       fill(W);
       extraDesign();
       noFill();
-      fill(B);
-      scoreBoard.actualScore();
-      noFill();
-      fill(R);
-      scoreBoard.actualScore2();
-      noFill();
     } else if (key == 't' || key == 'T') {
       background(DG);
       //fill(#2AD833);
@@ -54,12 +47,6 @@ public class TablePog {
       //noFill();
       fill(GR);
       extraDesign();
-      noFill();
-      fill(B);
-      scoreBoard.actualScore();
-      noFill();
-      fill(R);
-      scoreBoard.actualScore2();
       noFill();
     }
   }

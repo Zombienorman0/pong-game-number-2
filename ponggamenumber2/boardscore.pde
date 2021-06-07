@@ -7,32 +7,26 @@ public class boardScore {
 
   void draw() {
     fill(#13589B);
-    actualScore();
+    //actualScore();
     noFill();
     fill(#AF1320);
-    actualScore2();
+    //actualScore2();
     noFill();
     retsrtgame();
   }
 
 
-  void actualScore() {
-    textSize(50);
-    text('0', 850, 100);
-  }
-  void actualScore2() {
-    textSize(50);
-    text('0', 1075, 100);
-  }
 
 
 
   void retsrtgame() {
     if (key == 'l' || key == 'L') {
+      //loop();
       ball = new BallPog(displayWidth, displayHeight);
       PogTable = new TablePog(displayWidth, displayHeight);
       paddle = new PaddlePog(displayWidth, displayHeight);
       scoreBoard = new boardScore(displayWidth, displayHeight);
+      
     }
   }
 }
