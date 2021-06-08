@@ -61,7 +61,7 @@ public class BallPog {
         ball = new BallPog(displayWidth, displayHeight);  
         score[0] += 1;
       }
-    } else 
+    }
     if (keys[4] == true) {
       if (x > displayWidth - diameterX/2) {
         fill(DG);
