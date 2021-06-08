@@ -17,13 +17,13 @@ void setup() {
 }
 
 void draw() {
-  
   PogTable.draw();//always has to be first 
   ball.draw();
   paddle.draw();
   scoreBoard.draw();
   paddleMoveB();
   paddleMoveR();
+  //keyPressesd();
   //scoreBoard.retsrtgame();
 }
 

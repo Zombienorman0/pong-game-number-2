@@ -1,5 +1,16 @@
+//ball variables
+color  defaultColour = 0;
+float xSpeed = 2.8;
+float ySpeed = 2.8;
+int xDirection = 1;
+int yDirection = 1;
+color DG = #054309;
 
-
+int x = displayWidth/2;
+int y = displayHeight/2;
+int diameterX = displayHeight/20;
+int diameterY = diameterX;
+int ballColour = color(#CB16D8);
 
 void keyPressed () {
   if (key == 'w' || key =='W') {
