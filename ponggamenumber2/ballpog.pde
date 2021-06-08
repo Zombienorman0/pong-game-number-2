@@ -38,7 +38,7 @@ public class BallPog {
     if (y > displayHeight - diameterY/2|| y < diameterY -20) {
       yDirection *= +-1;
     }
-  }
+  } 
   private void scorescore () {
     if (x < diameterX -20) {
       ball = new BallPog(displayWidth, displayHeight); 
@@ -46,33 +46,33 @@ public class BallPog {
     }
     //switch between Multiplayer & Practice
     fill(#13589B);
-  textSize(50);
-  text("Practice", 300, 100);
-  noFill();
-  if (key == 'm' || key == 'M') {
-    fill(DG);
-    rect(300, 50, 310, 60);
-    noFill();
-    fill(#AF1320);
     textSize(50);
-    text("Multiplayer", 1400, 100);
+    text("Practice", 300, 100);
     noFill();
-    if (x > displayWidth - diameterX/2) {//x > displayWidth - diameterX/2
-      ball = new BallPog(displayWidth, displayHeight);  
-      score[0] += 1;
-    }
-  } 
-  if (key == 'n' || key == 'n') {
-    if (x > displayWidth - diameterX/2) {
+    if (keys[5] == true) {
       fill(DG);
-      rect(1400, 50, 310, 60);
+      rect(300, 50, 310, 60);
       noFill();
-      fill(#13589B);
+      fill(#AF1320);
       textSize(50);
-      text("Practice", 300, 100);
+      text("Multiplayer", 1400, 100);
       noFill();
+      if (x > displayWidth - diameterX/2) {//x > displayWidth - diameterX/2
+        ball = new BallPog(displayWidth, displayHeight);  
+        score[0] += 1;
+      }
+    } else 
+    if (keys[4] == true) {
+      if (x > displayWidth - diameterX/2) {
+        fill(DG);
+        rect(1400, 50, 310, 60);
+        noFill();
+        fill(#13589B);
+        textSize(50);
+        text("Practice", 300, 100);
+        noFill();
+      }
     }
-  }
   }
   void ballers() {
     fill(ballColour);

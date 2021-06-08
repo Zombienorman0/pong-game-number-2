@@ -25,6 +25,12 @@ void keyPressed () {
   if (keyCode == DOWN) {
     keys[3] = true;
   }
+  if (key == 'n' || key == 'N') {
+    keys[4] = true;
+  }
+  if (key == 'm' || key == 'M') {
+    keys[5] = true;
+  }
 }
 
 void keyReleased() {

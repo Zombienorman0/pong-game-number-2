@@ -4,7 +4,7 @@ PaddlePog paddle;
 boardScore scoreBoard;
 //Leftpaddles Paddles;
 //global variables
-static boolean [] keys = new boolean[4];
+static boolean [] keys = new boolean[6];
 
 void setup() {
   fullScreen(); //displayWidth, displayHeight
