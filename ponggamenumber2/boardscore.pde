@@ -16,9 +16,6 @@ public class boardScore {
   }
 
 
-
-
-
   void retsrtgame() {
     if (key == 'l' || key == 'L') {
       //loop();
@@ -28,7 +25,6 @@ public class boardScore {
       scoreBoard = new boardScore(displayWidth, displayHeight);
       score[0] = 0;
       score[1] = 0;
-      wefu();
     }
   }
 }

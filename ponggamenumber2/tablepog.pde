@@ -9,7 +9,7 @@ public class TablePog {
   int RectPointX = 960;
   TablePog(int displayWidth, int displayHeight ) {
   }
-  void geometryCheck(int displayWidth, int displayHeight) {
+  /*void geometryCheck(int displayWidth, int displayHeight) {
     if (displayWidth >= displayHeight) {
       fill(#CB16D8);
       textSize(32);
@@ -19,7 +19,7 @@ public class TablePog {
       text("this no good screen for pong", 10, 30); 
       exit();
     }
-  }
+  }*/
 
   void draw() {
     background(DG);
@@ -29,27 +29,27 @@ public class TablePog {
     noLoop();
     darkModeButton();
   }
-  
+
   void darkModeButton() {
-  loop();
-  if (key == 'r' || key == 'R') {
-    background(G);
-    fill(G);
-    wefu();
-    noFill();
-    fill(W);
-    extraDesign();
-    noFill();
-  } else if (key == 't' || key == 'T') {
-    background(DG);
-    fill(DG);
-    wefu();
-    noFill();
-    fill(GR);
-    extraDesign();
-    noFill();
+    loop();
+    if (key == 'r' || key == 'R') {
+      background(G);
+      fill(G);
+      wefu();
+      noFill();
+      fill(W);
+      extraDesign();
+      noFill();
+    } else if (key == 't' || key == 'T') {
+      background(DG);
+      fill(DG);
+      wefu();
+      noFill();
+      fill(GR);
+      extraDesign();
+      noFill();
+    }
   }
-}
   /*void scoreArea() {
    rect(1/20, 1/20, 30, 1100);
    rect(1890, 1/20, 30, 1100);

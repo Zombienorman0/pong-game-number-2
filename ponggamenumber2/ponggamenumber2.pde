@@ -18,8 +18,8 @@ void setup() {
 
 void draw() {
   PogTable.draw();//always has to be first 
-  ball.draw();
   paddle.draw();
+  ball.draw();
   scoreBoard.draw();
   paddleMoveB();
   paddleMoveR();
