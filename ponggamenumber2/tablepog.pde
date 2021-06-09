@@ -29,27 +29,27 @@ public class TablePog {
     noLoop();
     darkModeButton();
   }
-
+  
   void darkModeButton() {
-    loop();
-    if (key == 'r' || key == 'R') {
-      background(G);
-      //fill(#054309);
-      // scoreArea();
-      //noFill();
-      fill(W);
-      extraDesign();
-      noFill();
-    } else if (key == 't' || key == 'T') {
-      background(DG);
-      //fill(#2AD833);
-      //scoreArea();
-      //noFill();
-      fill(GR);
-      extraDesign();
-      noFill();
-    }
+  loop();
+  if (key == 'r' || key == 'R') {
+    background(G);
+    fill(G);
+    wefu();
+    noFill();
+    fill(W);
+    extraDesign();
+    noFill();
+  } else if (key == 't' || key == 'T') {
+    background(DG);
+    fill(DG);
+    wefu();
+    noFill();
+    fill(GR);
+    extraDesign();
+    noFill();
   }
+}
   /*void scoreArea() {
    rect(1/20, 1/20, 30, 1100);
    rect(1890, 1/20, 30, 1100);

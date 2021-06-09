@@ -6,6 +6,7 @@ public class BallPog {
   int xDirection = 1;
   int yDirection = 1;
   color DG = #054309;
+  color G = #2AD833;
 
 
   BallPog(int displayWidth, int displayHeight) {
@@ -39,7 +40,7 @@ public class BallPog {
       yDirection *= +-1;
     }
   } 
-  private void scorescore () {
+  public void scorescore () {
     if (x < diameterX -20) {
       ball = new BallPog(displayWidth, displayHeight); 
       score[1] += 1;
@@ -50,9 +51,7 @@ public class BallPog {
     text("Practice", 300, 100);
     noFill();
     if (keys[5] == true) {
-      fill(DG);
-      rect(300, 50, 310, 60);
-      noFill();
+      wefu();
       fill(#AF1320);
       textSize(50);
       text("Multiplayer", 1400, 100);
@@ -64,9 +63,9 @@ public class BallPog {
     }
     if (keys[4] == true) {
       if (x > displayWidth - diameterX/2) {
-        fill(DG);
-        rect(1400, 50, 310, 60);
-        noFill();
+        /*fill(DG);
+         rect(1400, 50, 200, 52);
+         noFill();*/
         fill(#13589B);
         textSize(50);
         text("Practice", 300, 100);

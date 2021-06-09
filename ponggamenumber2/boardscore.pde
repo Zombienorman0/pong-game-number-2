@@ -26,6 +26,9 @@ public class boardScore {
       PogTable = new TablePog(displayWidth, displayHeight);
       paddle = new PaddlePog(displayWidth, displayHeight);
       scoreBoard = new boardScore(displayWidth, displayHeight);
+      score[0] = 0;
+      score[1] = 0;
+      wefu();
     }
   }
 }
