@@ -1,9 +1,5 @@
 //ball variables
 color  defaultColour = 0;
-float xSpeed = 2.8;
-float ySpeed = 2.8;
-int xDirection = 1;
-int yDirection = 1;
 color DG = #054309;
 
 int x = displayWidth/2;
@@ -25,11 +21,8 @@ void keyPressed () {
   if (keyCode == DOWN) {
     keys[3] = true;
   }
-  if (key == 'n' || key == 'N') {
-    keys[4] = true;
-  }
   if (key == 'm' || key == 'M') {
-    keys[5] = true;
+    keys[4] = true;
   }
 }
 

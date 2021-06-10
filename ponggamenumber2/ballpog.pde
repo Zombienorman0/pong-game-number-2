@@ -1,4 +1,4 @@
-public class BallPog {
+private class BallPog {
   float x, y, diameterX, diameterY;//ball variables
   color ballColour, defaultColour = 0;
   float xSpeed = 2.8;
@@ -21,21 +21,27 @@ public class BallPog {
 
 
   void draw() {
-    movement();
     ballers();
     actualScore();
     actualScore2();
     scorescore();
   }
 
-  void movement() {
 
+  void ballers() {
+    fill(ballColour);
+    ellipse(x, y, diameterX, diameterY);
+    movement();
+    stroke(0);
+  }
+  void movement() {
     x = x + ( xSpeed * xDirection );
     y = y + ( ySpeed * yDirection );
 
-    if (x > displayWidth - diameterX/2 || x < diameterX -20) {//red side || blue side
-      xDirection *= +-1;
-    }
+
+    //if (x > displayWidth - diameterX/2 || x < diameterX -20) {//red side || blue side
+      //xDirection *= +-1;
+    //}
     if (y > displayHeight - diameterY/2|| y < diameterY -20) {
       yDirection *= +-1;
     }
@@ -50,7 +56,7 @@ public class BallPog {
     textSize(50);
     text("Practice", 300, 100);
     noFill();
-    if (keys[5] == true) {
+    if (keys[4] == true) {
       wefu();
       fill(#AF1320);
       textSize(50);
@@ -61,21 +67,5 @@ public class BallPog {
         score[0] += 1;
       }
     }
-    if (keys[4] == true) {
-      if (x > displayWidth - diameterX/2) {
-        /*fill(DG);
-         rect(1400, 50, 200, 52);
-         noFill();*/
-        fill(#13589B);
-        textSize(50);
-        text("Practice", 300, 100);
-        noFill();
-      }
-    }
-  }
-  void ballers() {
-    fill(ballColour);
-    ellipse(x, y, diameterX, diameterY);
-    fill(defaultColour);
   }
 }

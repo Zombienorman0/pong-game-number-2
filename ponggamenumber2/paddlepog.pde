@@ -22,25 +22,18 @@ public class PaddlePog {
     y = displayHeight/2;
     diameterX = displayHeight/20;
   }
-  void draw() {
-    ballPaddleBounce();
+  void draw() { 
     paddleDesign();
+    ballPaddleBounce();
   }
-
+  
   void ballPaddleBounce() {
-    x = x + ( xSpeed * xDirection );
-    y = y + ( ySpeed * yDirection );
-    
-    
-   if ( x < PaddleX1 + paddleSizeX +diameterX/2) {//red side || blue side
-      xDirection *= +-1;
-    }
-    if ( y <= paddleY+paddleSizeY) {
-      yDirection *= +-1;
-    }
-    //if () {
-    // }
+
+  if ( x <  PaddleX1+ paddleSizeX +diameterX/2 || x >  paddleX2  -diameterX/2) {//red side || blue side
+    xDirection *= -+ 1;
   }
+}
+
   void paddleDesign() {
     fill(#13589B);
     paddleB();
