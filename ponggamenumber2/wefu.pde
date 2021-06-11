@@ -3,9 +3,6 @@ color W = #FFFFFF;
 color G = #2AD833;
 color GD = #054309;
 boolean darkMode;
-int paddleX2 = 1855;
-int PaddleX1 = 35;
-int paddleSizeX = 30;
 int xDirection = 1;
 int yDirection = 1;
 

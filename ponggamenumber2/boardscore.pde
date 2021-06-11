@@ -18,7 +18,7 @@ public class boardScore {
 
   void retsrtgame() {
     if (key == 'l' || key == 'L') {
-      //loop();
+      loop();
       ball = new BallPog(displayWidth, displayHeight);
       PogTable = new TablePog(displayWidth, displayHeight);
       paddle = new PaddlePog(displayWidth, displayHeight);

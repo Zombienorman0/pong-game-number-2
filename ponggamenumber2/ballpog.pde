@@ -1,6 +1,5 @@
-private class BallPog {
-  float x, y, diameterX, diameterY;//ball variables
-  color ballColour, defaultColour = 0;
+public class BallPog {//ball variables
+  color ballColour = #A20BA2;
   float xSpeed = 2.8;
   float ySpeed = 2.8;
   int xDirection = 1;
@@ -10,12 +9,9 @@ private class BallPog {
 
 
   BallPog(int displayWidth, int displayHeight) {
-
     x = displayWidth/2;
     y = displayHeight/2;
     diameterX = displayHeight/20;
-    diameterY = diameterX;
-    ballColour = color(#CB16D8);
   } // end consturctor
 
 
@@ -30,19 +26,15 @@ private class BallPog {
 
   void ballers() {
     fill(ballColour);
-    ellipse(x, y, diameterX, diameterY);
-    movement();
+    ellipse(x, y, diameterX, diameterX);
     stroke(0);
+    noStroke();
+    movement();
   }
   void movement() {
-    x = x + ( xSpeed * xDirection );
     y = y + ( ySpeed * yDirection );
 
-
-    //if (x > displayWidth - diameterX/2 || x < diameterX -20) {//red side || blue side
-      //xDirection *= +-1;
-    //}
-    if (y > displayHeight - diameterY/2|| y < diameterY -20) {
+    if (y > displayHeight - diameterX/2|| y < diameterX -20) {
       yDirection *= +-1;
     }
   } 

@@ -2,12 +2,6 @@
 color  defaultColour = 0;
 color DG = #054309;
 
-int x = displayWidth/2;
-int y = displayHeight/2;
-int diameterX = displayHeight/20;
-int diameterY = diameterX;
-int ballColour = color(#CB16D8);
-
 void keyPressed () {
   if (key == 'w' || key =='W') {
     keys[0] = true;
@@ -23,6 +17,9 @@ void keyPressed () {
   }
   if (key == 'm' || key == 'M') {
     keys[4] = true;
+  }
+  if (key == 'z' || key == 'Z') {
+    keys[5] = true;
   }
 }
 
