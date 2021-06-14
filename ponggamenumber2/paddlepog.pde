@@ -21,10 +21,9 @@ class PaddlePog {
   }
   void ballPaddleBounce() {
     x = x + ( xSpeed * xDirection );
-     //y = y + ( ySpeed * yDirection );//red side || blue side
+    //y = y + ( ySpeed * yDirection );//red side || blue side
     if ( x < PaddleX1 +diameterX  || x >  paddleX2 -diameterX/2) {//red side || blue side
       xDirection *= +- 1;
-
     }
     if ( y < PaddleX1 + paddleY && y > PaddleX1 || y < paddleX2 + paddleY && y > paddleX2  ) {//red side || blue side
       yDirection *= +- 1;
@@ -69,5 +68,13 @@ class PaddlePog {
     if ( paddleY1 >= 1080 - paddleSizeY1) {
       paddleY1 = 1080 - paddleSizeY1;
     }
+  }
+  void paddleBounce1() {
+  }
+  void paddleBounce2() {
+  }
+  void paddleBounce3() {
+  }
+  void paddleBounce4() {
   }
 }
