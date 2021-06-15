@@ -11,8 +11,6 @@ class PaddlePog {
     paddleX2 = 1855;
     paddleSizeX = 30;
     paddleSizeY = 200;
-    paddleSizeX1 = 30;
-    paddleSizeY1 = 200;
     paddleSpeed = 5;
   }
   void draw() { 
@@ -20,12 +18,12 @@ class PaddlePog {
     ballPaddleBounce();
   }
   void ballPaddleBounce() {
-    x = x + ( xSpeed * xDirection );
+    ball.x = ball.x + ( xSpeed * xDirection );
     //y = y + ( ySpeed * yDirection );//red side || blue side
-    if ( x < PaddleX1 +diameterX  || x >  paddleX2 -diameterX/2) {//red side || blue side
+    if ( ball.x < PaddleX1 +ball.diameterX  || ball.x >  paddleX2 - ball.diameterX/2  ) {//blue side WIP || red side WIP
       xDirection *= +- 1;
     }
-    if ( y < PaddleX1 + paddleY && y > PaddleX1 || y < paddleX2 + paddleY && y > paddleX2  ) {//red side || blue side
+    if ( ball.y > paddleX2 + paddleY ) {//blue side WIP || red side WIP
       yDirection *= +- 1;
     }
   }
@@ -43,7 +41,7 @@ class PaddlePog {
     rect(PaddleX1, paddleY, paddleSizeX, paddleSizeY);
   }
   void paddleR () {
-    rect(paddleX2, paddleY1, paddleSizeX1, paddleSizeY1);
+    rect(paddleX2, paddleY1, paddleSizeX, paddleSizeY);
   }
   void paddleMovementP1() {
     paddleY-= paddleSpeed;
@@ -65,16 +63,23 @@ class PaddlePog {
   }
   void paddleMovementP4() {
     paddleY1+= paddleSpeed;
-    if ( paddleY1 >= 1080 - paddleSizeY1) {
-      paddleY1 = 1080 - paddleSizeY1;
+    if ( paddleY1 >= 1080 - paddleSizeY) {
+      paddleY1 = 1080 - paddleSizeY;
     }
   }
-  void paddleBounce1() {
+  float paddleBounce1() {
+    return paddleY;
   }
-  void paddleBounce2() {
+  float paddleBounce2() {
+    return PaddleX1;
   }
-  void paddleBounce3() {
+  float paddleBounce3() {
+    return paddleX2;
   }
-  void paddleBounce4() {
+  float paddleBounce4() {
+    return paddleSizeX;
+  }
+  float paddleBounce5() {
+    return paddleSizeY;
   }
 }

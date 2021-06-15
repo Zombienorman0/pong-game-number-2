@@ -6,21 +6,22 @@ public class BallPog {//ball variables
   int yDirection = 1;
   color DG = #054309;
   color G = #2AD833;
+  float x, y, diameterX;
 
 
   BallPog(int displayWidth, int displayHeight) {
-    x = displayWidth/2;
-    y = displayHeight/2;
-    diameterX = displayHeight/20;
+    this.x = displayWidth/2;
+    this.y = displayHeight/2;
+    this.diameterX = displayHeight/20;
   } // end consturctor
 
 
 
   void draw() {
+    scorescore();
     ballers();
     actualScore();
     actualScore2();
-    scorescore();
   }
 
 
