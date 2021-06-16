@@ -29,7 +29,7 @@ public class BallPog {//ball variables
     actualScore();
     actualScore2();
     ballers();
-    extraBall ();
+    //extraBall ();
   }
 
 
@@ -40,15 +40,15 @@ public class BallPog {//ball variables
     noStroke();
     movement();
   }
-  void extraBall () {
-    if (keys[5] == true) {
-      fill(ballColour1);
-      ellipse(xt, yt, diameterXt, diameterXt);
-      stroke(0);
-      noStroke();
-      movement2();
-    }
-  }
+  /*void extraBall () {
+   if (keys[5] == true) {
+   fill(ballColour1);
+   ellipse(xt, yt, diameterXt, diameterXt);
+   stroke(0);
+   noStroke();
+   movement2();
+   }
+   }*/
   void movement() {
     y = y + ( ySpeed * yDirection );
 
@@ -63,24 +63,33 @@ public class BallPog {//ball variables
     }
   }
   public void scorescore () {
-    if (x < diameterX -20||xt < diameterXt -20) {
-      ball = new BallPog(displayWidth, displayHeight); 
-      score[1] += 1;
-    }
-    //switch between Multiplayer & Practice
-    fill(#13589B);
+    fill(G);
     textSize(50);
-    text("Practice", 300, 100);
+    text("TO START GAME", 785, 340);
+    textSize(50);
+    text("PRESS X", 880, 495);
     noFill();
-    if (keys[4] == true) {
+    if (keys[6] == true) {
       wefu();
-      fill(#AF1320);
+      if (x < diameterX -20||xt < diameterXt -20) {
+        ball = new BallPog(displayWidth, displayHeight); 
+        score[1] += 1;
+      }
+      //switch between Multiplayer & Practice
+      fill(#13589B);
       textSize(50);
-      text("Multiplayer", 1400, 100);
+      text("Practice", 300, 100);
       noFill();
-      if (x > displayWidth - diameterX/2||xt > displayWidth - diameterXt/2) {//x > displayWidth - diameterX/2
-        ball = new BallPog(displayWidth, displayHeight);  
-        score[0] += 1;
+      if (keys[4] == true) {
+        wefu();
+        fill(#AF1320);
+        textSize(50);
+        text("Multiplayer", 1400, 100);
+        noFill();
+        if (x > displayWidth - diameterX/2||xt > displayWidth - diameterXt/2) {//x > displayWidth - diameterX/2
+          ball = new BallPog(displayWidth, displayHeight);  
+          score[0] += 1;
+        }
       }
     }
   }

@@ -18,11 +18,11 @@ void keyPressed () {
   if (key == 'm' || key == 'M') {
     keys[4] = true;
   }
-  if (key == 'z' || key == 'Z') {
-    keys[5] = true;
-  }
   if (key == 'b' || key == 'B') {
     keys[5] = true;
+  }
+  if (key == 'x' || key == 'X') {
+    keys[6] = true;
   }
 }
 
