@@ -1,4 +1,4 @@
-class PaddlePog {
+class PaddlePog { //<>//
   float paddleY, paddleY1, PaddleX1, paddleX2, paddleSizeX, paddleSizeY, paddleSizeX1, paddleSizeY1, paddleSpeed;// paddle variables
   int xDirection = 1;
   float xSpeed = 2.8;
@@ -19,12 +19,10 @@ class PaddlePog {
   }
   void ballPaddleBounce() {
     ball.x = ball.x + ( xSpeed * xDirection );
-    ball.xt = ball.xt - ( xSpeed * xDirection );
-    //y = y + ( ySpeed * yDirection );//red side || blue side
     if ( ball.x < PaddleX1 +ball.diameterX  || ball.x >  paddleX2 - ball.diameterX/2  ) {//blue side WIP || red side WIP
-      xDirection *= +- 1; //<>//
+      xDirection *= +- 1;
     }
-    
+    ball.xt = ball.xt - ( xSpeed * xDirection );
     if ( ball.xt < PaddleX1 +ball.diameterXt  || ball.xt >  paddleX2 - ball.diameterXt/2  ) {//blue side WIP || red side WIP
       xDirection *= +- 1;
     }

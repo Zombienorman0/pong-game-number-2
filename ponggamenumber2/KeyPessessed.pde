@@ -21,6 +21,9 @@ void keyPressed () {
   if (key == 'z' || key == 'Z') {
     keys[5] = true;
   }
+  if (key == 'b' || key == 'B') {
+    keys[5] = true;
+  }
 }
 
 void keyReleased() {
