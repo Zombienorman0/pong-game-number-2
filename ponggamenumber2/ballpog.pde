@@ -29,7 +29,7 @@ public class BallPog {//ball variables
     actualScore();
     actualScore2();
     ballers();
-    //extraBall ();
+    extraBall ();
   }
 
 
@@ -40,15 +40,15 @@ public class BallPog {//ball variables
     noStroke();
     movement();
   }
-  /*void extraBall () {
-   if (keys[5] == true) {
-   fill(ballColour1);
-   ellipse(xt, yt, diameterXt, diameterXt);
-   stroke(0);
-   noStroke();
-   movement2();
-   }
-   }*/
+  void extraBall () {
+    if (keys[7] == true) {
+      fill(ballColour1);
+      ellipse(xt, yt, diameterXt, diameterXt);
+      stroke(0);
+      noStroke();
+      movement2();
+    }
+  }
   void movement() {
     y = y + ( ySpeed * yDirection );
 
