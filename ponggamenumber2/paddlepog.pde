@@ -15,7 +15,7 @@ class PaddlePog {
   }
   void draw() { 
     paddleDesign();
-    //ballPaddleBounce();
+    ballPaddleBounce();
   }
   void ballPaddleBounce() {
     ball.x = ball.x + ( xSpeed * xDirection );
