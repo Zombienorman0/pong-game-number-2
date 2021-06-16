@@ -15,16 +15,18 @@ class PaddlePog {
   }
   void draw() { 
     paddleDesign();
-    ballPaddleBounce();
+    //ballPaddleBounce();
   }
   void ballPaddleBounce() {
     ball.x = ball.x + ( xSpeed * xDirection );
+    ball.xt = ball.xt - ( xSpeed * xDirection );
     //y = y + ( ySpeed * yDirection );//red side || blue side
     if ( ball.x < PaddleX1 +ball.diameterX  || ball.x >  paddleX2 - ball.diameterX/2  ) {//blue side WIP || red side WIP
-      xDirection *= +- 1;
+      xDirection *= +- 1; //<>//
     }
-    if ( ball.y > paddleX2 + paddleY ) {//blue side WIP || red side WIP
-      yDirection *= +- 1;
+    
+    if ( ball.xt < PaddleX1 +ball.diameterXt  || ball.xt >  paddleX2 - ball.diameterXt/2  ) {//blue side WIP || red side WIP
+      xDirection *= +- 1;
     }
   }
   void paddleDesign() {
