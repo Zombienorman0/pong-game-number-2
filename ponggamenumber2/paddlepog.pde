@@ -4,13 +4,12 @@ class PaddlePog { //<>//
   float xSpeed = 2.8;
   float ySpeed = 2.8;
   PaddlePog (int displayWidth, int displayHeight) {
-
-    paddleY = 450;
-    paddleY1 = 451;
-    PaddleX1 = 35;
-    paddleX2 = 1855;
-    paddleSizeX = 30;
     paddleSizeY = 200;
+    this.paddleY = displayHeight/2 -paddleSizeY/2;
+    this.paddleY1 = paddleY;
+    this.PaddleX1 = 35;
+    this.paddleX2 = 1855;
+    paddleSizeX = 30;
     paddleSpeed = 5;
   }
   void draw() { 
@@ -19,7 +18,7 @@ class PaddlePog { //<>//
   }
   void ballPaddleBounce() {
     ball.x = ball.x + ( xSpeed * xDirection );
-    if ( ball.x < PaddleX1 +ball.diameterX  || ball.x >  paddleX2 - ball.diameterX/2  ) {//blue side WIP || red side WIP
+    if ( ball.x < PaddleX1 +ball.diameterX && ball.y > paddleY && ball.y < paddleY+ paddleSizeY || ball.x >  paddleX2 - ball.diameterX/2  ) {//blue side WIP || red side WIP
       xDirection *= +- 1;
     }
     ball.xt = ball.xt - ( xSpeed * xDirection );
