@@ -2,12 +2,11 @@ BallPog ball;
 TablePog PogTable;
 PaddlePog paddle;
 boardScore scoreBoard;
-//Leftpaddles Paddles;
 //global variables
 static boolean [] keys = new boolean[8];
 
 void setup() {
-  fullScreen(); //displayWidth, displayHeight
+  fullScreen(); 
   noStroke();
   //PogTable.geometryCheck(displayWidth, displayHeight);
   PogTable = new TablePog( displayWidth, displayHeight);
@@ -23,12 +22,4 @@ void draw() {
   paddle.draw();
   paddleMoveB();
   paddleMoveR();
-
-
-  //keyPressesd();
-  //scoreBoard.retsrtgame();
 }
-
-// void keyPressed() {}
-
-//void mousePressed() {}

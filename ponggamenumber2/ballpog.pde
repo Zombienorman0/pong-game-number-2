@@ -31,7 +31,6 @@ public class BallPog {//ball variables
     actualScore2();
   }
 
-
   void ballers() {
     fill(ballColour);
     ellipse(x, y, diameterX, diameterX);
@@ -48,7 +47,7 @@ public class BallPog {//ball variables
       movement2();
     }
   }
-  
+
   void movement() {
     y = y + ( ySpeed * yDirection );
 
@@ -62,7 +61,7 @@ public class BallPog {//ball variables
       yDirection *= +-1;
     }
   }
-  
+
   public void scorescore () {
     wefu();
     //switch between Multiplayer & Practice

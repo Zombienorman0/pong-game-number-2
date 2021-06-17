@@ -50,21 +50,15 @@ public class TablePog {
       noFill();
     }
   }
-  /*void scoreArea() {
-   rect(1/20, 1/20, 30, 1100);
-   rect(1890, 1/20, 30, 1100);
-   }*/
 
   void extraDesign() {
     //around the scoreBoard();
-    //fill(#FFFFFF);
-
     rect(775, 150, RectWidth, Rectheight);
     rect(750, 25, Rectheight, RectWidth);
     rect(1075, 150, RectWidth, Rectheight);
     rect(1175, 25, Rectheight, RectWidth);
+
     //lines down the middle
-    //fill(#FFFFFF);
     rect(RectPointX, 25, Rectheight, RectWidth);
     rect(RectPointX, 200, Rectheight, RectWidth);
     rect(RectPointX, 350, Rectheight, RectWidth);
@@ -72,6 +66,5 @@ public class TablePog {
     rect(RectPointX, 650, Rectheight, RectWidth);
     rect(RectPointX, 800, Rectheight, RectWidth);
     rect(RectPointX, 950, Rectheight, RectWidth);
-    //noFill();
   }
 }
