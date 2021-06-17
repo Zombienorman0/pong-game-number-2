@@ -1,9 +1,10 @@
 public class BallPog {//ball variables
   color ballColour = #A20BA2;
   color ballColour1 = #BB1BBF;
+  //change speed every game
   float xSpeed = 3.4;
-  float ySpeed = 5;
-  float ySpeed1 = 4;
+  float ySpeed = 2.8;
+  float ySpeed1 = 3.5;
   int xDirection = 1;
   int yDirection = 1;
   int xDirection1 = -1;
@@ -21,8 +22,6 @@ public class BallPog {//ball variables
     this.yt = y;
     this.diameterXt = diameterX;
   } // end consturctor
-
-
 
   void draw() {
     scorescore();
@@ -49,19 +48,21 @@ public class BallPog {//ball variables
       movement2();
     }
   }
+  
   void movement() {
-    y = y + ( ySpeed1 * yDirection );
+    y = y + ( ySpeed * yDirection );
 
     if (y > displayHeight - diameterX/2|| y < diameterX -20) {
       yDirection *= +-1;
     }
   }
   void movement2() {
-    yt = yt + ( ySpeed * yDirection);
+    yt = yt + ( ySpeed1 * yDirection);
     if (yt > displayHeight - diameterXt/2|| yt < diameterXt -20) {
       yDirection *= +-1;
     }
   }
+  
   public void scorescore () {
     wefu();
     //switch between Multiplayer & Practice

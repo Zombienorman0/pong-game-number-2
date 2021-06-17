@@ -1,5 +1,3 @@
-
-
 void keyPressed () {
   if (key == 'w' || key =='W') {
     keys[0] = true;

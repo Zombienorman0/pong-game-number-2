@@ -1,9 +1,7 @@
 public class boardScore {
 
-
   boardScore(int displayWidth, int displayHeight) {
   }
-
 
   void draw() {
     fill(#13589B);
@@ -14,7 +12,6 @@ public class boardScore {
     noFill();
     retsrtgame();
   }
-
 
   void retsrtgame() {
     if (key == 'l' || key == 'L') {
