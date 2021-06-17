@@ -1,6 +1,4 @@
-//ball variables
-color  defaultColour = 0;
-color DG = #054309;
+
 
 void keyPressed () {
   if (key == 'w' || key =='W') {
@@ -18,14 +16,11 @@ void keyPressed () {
   if (key == 'm' || key == 'M') {
     keys[4] = true;
   }
-    if (key == 'z' || key == 'Z') {
+  if (key == 'z' || key == 'Z') {
     keys[5] = true;
-  }
-  if (key == 'x' || key == 'X') {
-    keys[6] = true;
-  }
+  } 
   if (key == 'b' || key == 'B') {
-    keys[7] = true;
+    keys[6] = true;
   }
 }
 

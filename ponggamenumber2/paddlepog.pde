@@ -1,7 +1,9 @@
 class PaddlePog { //<>//
   float paddleY, paddleY1, PaddleX1, paddleX2, paddleSizeX, paddleSizeY, paddleSizeX1, paddleSizeY1, paddleSpeed;// paddle variables
   int xDirection = 1;
+  int xDirection1 = -1;
   float xSpeed = 2.8;
+  float xSpeed1 = 3.8;
   float ySpeed = 2.8;
   PaddlePog (int displayWidth, int displayHeight) {
     paddleSizeY = 200;
@@ -18,12 +20,11 @@ class PaddlePog { //<>//
   }
   void ballPaddleBounce() {
     ball.x = ball.x + ( xSpeed * xDirection );
-    if ( ball.x < PaddleX1 +ball.diameterX && ball.y > paddleY && ball.y < paddleY+ paddleSizeY || ball.x >  paddleX2 - ball.diameterX/2  ) {//blue side WIP || red side WIP
+    if ( ball.x < PaddleX1 +ball.diameterX && ball.y > paddleY && ball.y < paddleY+ paddleSizeY || ball.x >  paddleX2 - ball.diameterX/2&& ball.y > paddleY1 && ball.y < paddleY1+ paddleSizeY ) {//blue side WIP || red side WIP
       xDirection *= +- 1;
-    }
-    ball.xt = ball.xt - ( xSpeed * xDirection );
-    if ( ball.xt < PaddleX1 +ball.diameterXt  || ball.xt >  paddleX2 - ball.diameterXt/2  ) {//blue side WIP || red side WIP
-      xDirection *= +- 1;
+    }    ball.xt = ball.xt + ( xSpeed1 * xDirection );
+    if ( ball.xt < PaddleX1 +ball.diameterXt && ball.yt > paddleY && ball.yt < paddleY+ paddleSizeY || ball.xt >  paddleX2 - ball.diameterXt/2&& ball.yt > paddleY1 && ball.yt < paddleY1+ paddleSizeY ) {//blue side WIP || red side WIP
+      xDirection1 *= +- 1;
     }
   }
   void paddleDesign() {
