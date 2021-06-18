@@ -7,7 +7,7 @@ int xDirection = 1;
 int yDirection = 1;
 
 
-private void wefu() {
+final private void wefu() {
 
   fill(GD);
   wefuwefu();

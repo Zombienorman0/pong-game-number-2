@@ -1,4 +1,4 @@
-void keyPressed () {
+final void keyPressed () {
   if (key == 'w' || key =='W') {
     keys[0] = true;
   }
@@ -22,7 +22,7 @@ void keyPressed () {
   }
 }
 
-void keyReleased() {
+final void keyReleased() {
   if (key == 'w' || key =='W') {
     keys[0] = false;
   }

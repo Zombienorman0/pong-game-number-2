@@ -1,4 +1,4 @@
-private void paddleMoveB () {
+final private void paddleMoveB () {
   if (keys[0] == true) {
     paddle.paddleMovementP1();
   }
@@ -6,7 +6,7 @@ private void paddleMoveB () {
     paddle.paddleMovementP2();
   }
 }
-private void paddleMoveR () {
+final private void paddleMoveR () {
   if (keys[2] == true) {
     paddle.paddleMovementP3();
   }

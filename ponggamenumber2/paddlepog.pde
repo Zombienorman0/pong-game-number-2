@@ -12,7 +12,7 @@ public class PaddlePog { //<>//
     this.PaddleX1 = 35;
     this.paddleX2 = 1855;
     paddleSizeX = 30;
-    paddleSpeed = 3;
+    paddleSpeed = 5;
   }
   private void draw() { 
     paddleDesign();
@@ -39,10 +39,10 @@ public class PaddlePog { //<>//
     noStroke();
     // ballPaddleBounce();
   } 
-  private  void paddleB () {
+  final private  void paddleB () {
     rect(PaddleX1, paddleY, paddleSizeX, paddleSizeY);
   }
-  private void paddleR () {
+  final private void paddleR () {
     rect(paddleX2, paddleY1, paddleSizeX, paddleSizeY);
   }
 
