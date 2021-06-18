@@ -20,11 +20,11 @@ public class PaddlePog { //<>//
   }
 
   public void ballPaddleBounce() {
-    ball.x = ball.x + ( xSpeed1 * xDirection );
+    ball.x = ball.x - ( xSpeed1 * xDirection );
     if ( ball.x < PaddleX1 +ball.diameterX && ball.y > paddleY && ball.y < paddleY+ paddleSizeY || ball.x >  paddleX2 - ball.diameterX/2&& ball.y > paddleY1 && ball.y < paddleY1+ paddleSizeY ) {//blue side WIP || red side WIP
       xDirection *= +- 1;
     }    
-    ball.xt = ball.xt - ( xSpeed * xDirection );
+    ball.xt = ball.xt + ( xSpeed * xDirection );
     if ( ball.xt < PaddleX1 +ball.diameterXt && ball.yt > paddleY && ball.yt < paddleY+ paddleSizeY || ball.xt >  paddleX2 - ball.diameterXt/2&& ball.yt > paddleY1 && ball.yt < paddleY1+ paddleSizeY ) {//blue side WIP || red side WIP
       xDirection1 *= +- 1;
     }

@@ -71,8 +71,8 @@ public class BallPog {//ball variables
     if (x < diameterX -20) {
       ball = new BallPog(displayWidth, displayHeight);
     } else if (x > displayWidth - diameterX/2) {//x > displayWidth - diameterX/2
-      ball = new BallPog(displayWidth, displayHeight);
-    }
+    xDirection *= +-1;
+      }
     if (keys[4] == true) {
       wefu();
       fill(#AF1320);
