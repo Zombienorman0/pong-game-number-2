@@ -5,7 +5,7 @@ boardScore scoreBoard;
 //global variables
 static boolean [] keys = new boolean[8];
 
-void setup() {
+ void setup() {
   fullScreen(); 
   noStroke();
   //PogTable.geometryCheck(displayWidth, displayHeight);

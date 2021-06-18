@@ -21,7 +21,7 @@ public class TablePog {
    }
    }*/
 
-  void draw() {
+  private void draw() {
     background(DG);
     fill(GR);
     extraDesign();
@@ -30,7 +30,7 @@ public class TablePog {
     darkModeButton();
   }
 
-  void darkModeButton() {
+  private void darkModeButton() {
     loop();
     if (key == 'r' || key == 'R') {
       background(G);
@@ -51,7 +51,7 @@ public class TablePog {
     }
   }
 
-  void extraDesign() {
+ private void extraDesign() {
     //around the scoreBoard();
     rect(775, 150, RectWidth, Rectheight);
     rect(750, 25, Rectheight, RectWidth);

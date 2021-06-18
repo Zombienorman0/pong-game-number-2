@@ -1,9 +1,9 @@
-public class boardScore {
+private class boardScore {
 
   boardScore(int displayWidth, int displayHeight) {
   }
 
-  void draw() {
+  private void draw() {
     fill(#13589B);
     //actualScore();
     noFill();
@@ -13,7 +13,7 @@ public class boardScore {
     retsrtgame();
   }
 
-  void retsrtgame() {
+ private void retsrtgame() {
     if (key == 'l' || key == 'L') {
       loop();
       ball = new BallPog(displayWidth, displayHeight);

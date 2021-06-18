@@ -7,7 +7,7 @@ int xDirection = 1;
 int yDirection = 1;
 
 
-void wefu() {
+private void wefu() {
 
   fill(GD);
   wefuwefu();
@@ -23,6 +23,6 @@ void wefu() {
     noFill();
   }
 }
-void wefuwefu() {
+private void wefuwefu() {
   rect(300, 50, 200, 52);
 }

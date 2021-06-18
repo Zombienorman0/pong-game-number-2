@@ -14,7 +14,7 @@ public class BallPog {//ball variables
   float x, y, diameterX, xt, yt, diameterXt;
 
 
-  BallPog(int displayWidth, int displayHeight) {
+ public BallPog(int displayWidth, int displayHeight) {
     this.x = displayWidth/2;
     this.y = displayHeight/2;
     this.diameterX = displayHeight/20;
@@ -23,7 +23,7 @@ public class BallPog {//ball variables
     this.diameterXt = diameterX;
   } // end consturctor
 
-  void draw() {
+  private void draw() {
     scorescore();
     ballers();
     extraBall ();
@@ -31,14 +31,14 @@ public class BallPog {//ball variables
     actualScore2();
   }
 
-  void ballers() {
+  private void ballers() {
     fill(ballColour);
     ellipse(x, y, diameterX, diameterX);
     stroke(0);
     noStroke();
     movement();
   }
-  void extraBall () {
+  private void extraBall () {
     if (keys[6] == true) {
       fill(ballColour);
       ellipse(xt, yt, diameterXt, diameterXt);
@@ -48,17 +48,17 @@ public class BallPog {//ball variables
     }
   }
 
-  void movement() {
+  private void movement() {
     y = y + ( ySpeed * yDirection );
 
     if (y > displayHeight - diameterX/2|| y < diameterX -20) {
       yDirection *= +-1;
     }
   }
-  void movement2() {
-    yt = yt + ( ySpeed1 * yDirection);
+  private void movement2() {
+    yt = yt - ( ySpeed1 * yDirection1);
     if (yt > displayHeight - diameterXt/2|| yt < diameterXt -20) {
-      yDirection *= +-1;
+      yDirection1 *= +-1;
     }
   }
 
