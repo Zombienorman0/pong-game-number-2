@@ -1,10 +1,10 @@
 public class PaddlePog { //<>//
-  float paddleY, paddleY1, PaddleX1, paddleX2, paddleSizeX, paddleSizeY, paddleSizeX1, paddleSizeY1, paddleSpeed;// paddle variables
-  int xDirection = 1;
-  int xDirection1 = -1;
+  private float paddleY, paddleY1, PaddleX1, paddleX2, paddleSizeX, paddleSizeY, paddleSizeX1, paddleSizeY1, paddleSpeed;// paddle variables
+  private int xDirection = 1;
+  public int xDirection1 = -1;
   //change speed every game
-  float xSpeed = 3.3;
-  float xSpeed1 = 3;
+  private float xSpeed = 3.3;
+  private float xSpeed1 = 3;
   PaddlePog (int displayWidth, int displayHeight) {
     paddleSizeY = 200;
     this.paddleY = displayHeight/2 -paddleSizeY/2;

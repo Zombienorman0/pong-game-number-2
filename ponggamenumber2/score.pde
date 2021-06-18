@@ -1,4 +1,4 @@
-int [] score = {0, 0};
+public int [] score = {0, 0};
 
 private void actualScore() {
   fill(#13589B);

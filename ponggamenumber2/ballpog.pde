@@ -1,17 +1,14 @@
 public class BallPog {//ball variables
-  color ballColour = #A20BA2;
-  color ballColour1 = #BB1BBF;
+  private color ballColour = #A20BA2;
+  
   //change speed every game
-  float xSpeed = 3.4;
-  float ySpeed = 2.8;
-  float ySpeed1 = 3.5;
-  int xDirection = 1;
-  int yDirection = 1;
-  int xDirection1 = -1;
-  int yDirection1 = -1;
-  color DG = #054309;
-  color G = #2AD833;
-  float x, y, diameterX, xt, yt, diameterXt;
+  private float ySpeed = 2.8;
+  private float ySpeed1 = 3.5;
+  private int yDirection = 1;
+  private int yDirection1 = -1;
+  public color DG = #054309;
+  public color G = #2AD833;
+  public float x, y, diameterX, xt, yt, diameterXt;
 
   public BallPog(int displayWidth, int displayHeight) {
     this.x = displayWidth/2;
@@ -71,8 +68,8 @@ public class BallPog {//ball variables
     if (x < diameterX -20) {
       ball = new BallPog(displayWidth, displayHeight);
     } else if (x > displayWidth - diameterX/2) {//x > displayWidth - diameterX/2
-    xDirection *= +-1;
-      }
+      xDirection *= +-1;
+    }
     if (keys[4] == true) {
       wefu();
       fill(#AF1320);

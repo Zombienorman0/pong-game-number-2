@@ -1,11 +1,11 @@
-BallPog ball;
-TablePog PogTable;
-PaddlePog paddle;
-boardScore scoreBoard;
+public BallPog ball;
+public TablePog PogTable;
+public PaddlePog paddle;
+private boardScore scoreBoard;
 //global variables
 static boolean [] keys = new boolean[8];
 
- void setup() {
+public void setup() {
   fullScreen(); 
   noStroke();
   //PogTable.geometryCheck(displayWidth, displayHeight);
@@ -15,7 +15,7 @@ static boolean [] keys = new boolean[8];
   scoreBoard = new boardScore(displayWidth, displayHeight);
 }
 
-void draw() {
+public void draw() {
   PogTable.draw();//always has to be first
   ball.draw();
   scoreBoard.draw();

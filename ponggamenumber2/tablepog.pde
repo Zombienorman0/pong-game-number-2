@@ -1,12 +1,12 @@
 public class TablePog {
-  color GR = #7F897F;
-  color W = #FFFFFF;
-  color G = #2AD833;
-  color DG = #054309;
-  boolean darkMode;
-  int RectWidth = 100;
-  int Rectheight = 30;
-  int RectPointX = 960;
+  public color DR = #7F897F;
+  public color W = #FFFFFF;
+  public color G = #2AD833;
+  public color DG = #054309;
+  public boolean darkMode;
+  private int RectWidth = 100;
+  private int Rectheight = 30;
+  private int RectPointX = 960;
   TablePog(int displayWidth, int displayHeight ) {
   }
   /*void geometryCheck(int displayWidth, int displayHeight) {
@@ -51,7 +51,7 @@ public class TablePog {
     }
   }
 
- private void extraDesign() {
+  private void extraDesign() {
     //around the scoreBoard();
     rect(775, 150, RectWidth, Rectheight);
     rect(750, 25, Rectheight, RectWidth);
