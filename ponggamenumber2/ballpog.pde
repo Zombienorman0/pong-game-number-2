@@ -13,7 +13,7 @@ public class BallPog {//ball variables
   color G = #2AD833;
   float x, y, diameterX, xt, yt, diameterXt;
 
- public BallPog(int displayWidth, int displayHeight) {
+  public BallPog(int displayWidth, int displayHeight) {
     this.x = displayWidth/2;
     this.y = displayHeight/2;
     this.diameterX = displayHeight/20;
@@ -69,8 +69,10 @@ public class BallPog {//ball variables
     text("Practice", 300, 100);
     noFill();
     if (x < diameterX -20) {
-        ball = new BallPog(displayWidth, displayHeight); 
-      } 
+      ball = new BallPog(displayWidth, displayHeight);
+    } else if (x > displayWidth - diameterX/2) {//x > displayWidth - diameterX/2
+      ball = new BallPog(displayWidth, displayHeight);
+    }
     if (keys[4] == true) {
       wefu();
       fill(#AF1320);
