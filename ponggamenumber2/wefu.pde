@@ -1,24 +1,15 @@
-color GR = #7F897F;
-color W = #FFFFFF;
-color G = #2AD833;
-color GD = #054309;
-boolean darkMode;
-int xDirection = 1;
-int yDirection = 1;
-
-
 final private void wefu() {
 
-  fill(GD);
+  fill(ball.DG_getter());
   wefuwefu();
   noFill();
   loop();
   if (key == 'r' || key == 'R') {
-    fill(G);
+    fill(ball.G_getter());
     wefuwefu();
     noFill();
   } else if (key == 't' || key == 'T') {
-    fill(GD);
+    fill(ball.DG_getter());
     wefuwefu();
     noFill();
   }

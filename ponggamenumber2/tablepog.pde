@@ -1,9 +1,6 @@
 public class TablePog {
-  public color DR = #7F897F;
-  public color W = #FFFFFF;
-  public color G = #2AD833;
-  public color DG = #054309;
-  public boolean darkMode;
+  private color GR = #7F897F;
+  private color W = #FFFFFF;
   private int RectWidth = 100;
   private int Rectheight = 30;
   private int RectPointX = 960;
@@ -22,7 +19,7 @@ public class TablePog {
    }*/
 
   private void draw() {
-    background(DG);
+    background(ball.DG_getter());
     fill(GR);
     extraDesign();
     noFill();
@@ -33,16 +30,16 @@ public class TablePog {
   private void darkModeButton() {
     loop();
     if (key == 'r' || key == 'R') {
-      background(G);
-      fill(G);
+      background(ball.G_getter());
+      fill(ball.G_getter());
       wefu();
       noFill();
       fill(W);
       extraDesign();
       noFill();
     } else if (key == 't' || key == 'T') {
-      background(DG);
-      fill(DG);
+      background(ball.DG_getter());
+      fill(ball.DG_getter());
       wefu();
       noFill();
       fill(GR);

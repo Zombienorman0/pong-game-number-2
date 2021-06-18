@@ -1,14 +1,16 @@
 public class BallPog {//ball variables
   private color ballColour = #A20BA2;
-  
+
   //change speed every game
   private float ySpeed = 2.8;
   private float ySpeed1 = 3.5;
+  private int xDirection = 1;
   private int yDirection = 1;
+  private int xDirection1 = -1;
   private int yDirection1 = -1;
-  public color DG = #054309;
-  public color G = #2AD833;
-  public float x, y, diameterX, xt, yt, diameterXt;
+  private color DG = #054309;
+  private color G = #2AD833;
+  private float x, y, diameterX, xt, yt, diameterXt;
 
   public BallPog(int displayWidth, int displayHeight) {
     this.x = displayWidth/2;
@@ -85,4 +87,35 @@ public class BallPog {//ball variables
       }
     }
   }
+  public color DG_getter () {
+    return DG;
+  }// end getter
+  public color G_getter () {
+    return G;
+  }// end getter
+  public int xDirection_getter () {
+    return xDirection;
+  }// end getter
+    public int xDirection1_getter () {
+    return xDirection1;
+  }// end getter
+  public float x_getter () {
+    return x;
+  }// end getter
+  public float y_getter () {
+    return y;
+  }// end getter
+  public float diameterX_getter () {
+    return diameterX;
+  }// end getter
+  public float xt_getter () {
+    return xt;
+  }// end getter
+  public float yt_getter () {
+    return yt;
+  }// end getter
+  public float diameterXt_getter () {
+    return diameterXt;
+  }// end getter
+  
 }

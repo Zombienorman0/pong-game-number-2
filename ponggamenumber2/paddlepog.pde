@@ -1,7 +1,6 @@
 public class PaddlePog { //<>//
-  private float paddleY, paddleY1, PaddleX1, paddleX2, paddleSizeX, paddleSizeY, paddleSizeX1, paddleSizeY1, paddleSpeed;// paddle variables
-  private int xDirection = 1;
-  public int xDirection1 = -1;
+  private float paddleY, paddleY1, PaddleX1, paddleX2, paddleSizeX, paddleSizeY, paddleSpeed;// paddle variables
+ 
   //change speed every game
   private float xSpeed = 3.3;
   private float xSpeed1 = 3;
@@ -20,13 +19,13 @@ public class PaddlePog { //<>//
   }
 
   public void ballPaddleBounce() {
-    ball.x = ball.x - ( xSpeed1 * xDirection );
+    ball.x = ball.x - ( xSpeed1 * ball.xDirection_getter() );
     if ( ball.x < PaddleX1 +ball.diameterX && ball.y > paddleY && ball.y < paddleY+ paddleSizeY || ball.x >  paddleX2 - ball.diameterX/2&& ball.y > paddleY1 && ball.y < paddleY1+ paddleSizeY ) {//blue side WIP || red side WIP
-      xDirection *= +- 1;
+      ball.xDirection  *= +- 1;
     }    
-    ball.xt = ball.xt + ( xSpeed * xDirection );
+    ball.xt = ball.xt + ( xSpeed * ball.xDirection_getter() );
     if ( ball.xt < PaddleX1 +ball.diameterXt && ball.yt > paddleY && ball.yt < paddleY+ paddleSizeY || ball.xt >  paddleX2 - ball.diameterXt/2&& ball.yt > paddleY1 && ball.yt < paddleY1+ paddleSizeY ) {//blue side WIP || red side WIP
-      xDirection1 *= +- 1;
+      ball.xDirection1 *= +- 1;
     }
   }
   private void paddleDesign() {
