@@ -1,6 +1,6 @@
 private class boardScore {
 
-  boardScore(int displayWidth, int displayHeight) {
+  private boardScore(int displayWidth, int displayHeight) {
   }
 
   final private void draw() {

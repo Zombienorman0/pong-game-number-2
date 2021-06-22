@@ -1,4 +1,4 @@
-public class BallPog {//ball variables
+public class BallPog {//ball variable
   private color ballColour = #A20BA2;
 
   //change speed every game

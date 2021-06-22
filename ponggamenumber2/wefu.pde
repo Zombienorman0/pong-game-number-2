@@ -14,6 +14,6 @@ final private void wefu() {
     noFill();
   }
 }
-private void wefuwefu() {
+final private void wefuwefu() {
   rect(300, 50, 200, 52);
 }

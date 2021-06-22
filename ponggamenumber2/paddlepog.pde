@@ -4,7 +4,9 @@ public class PaddlePog { //<>//
   //change speed every game
   private float xSpeed = 3.3;
   private float xSpeed1 = 3;
-  PaddlePog (int displayWidth, int displayHeight) {
+  public PaddlePog (int displayWidth, int displayHeight) {
+    
+    
     paddleSizeY = 200;
     this.paddleY = displayHeight/2 -paddleSizeY/2;
     this.paddleY1 = paddleY;
@@ -12,8 +14,9 @@ public class PaddlePog { //<>//
     this.paddleX2 = 1855;
     paddleSizeX = 30;
     paddleSpeed = 5;
+    
   }
-  private void draw() { 
+  public void draw() { 
     paddleDesign();
     ballPaddleBounce();
   }
@@ -39,10 +42,10 @@ public class PaddlePog { //<>//
     // ballPaddleBounce();
   } 
   final private  void paddleB () {
-    rect(PaddleX1, paddleY, paddleSizeX, paddleSizeY);
+    rect (PaddleX1, paddleY, paddleSizeX, paddleSizeY);
   }
   final private void paddleR () {
-    rect(paddleX2, paddleY1, paddleSizeX, paddleSizeY);
+    rect (paddleX2, paddleY1, paddleSizeX, paddleSizeY);
   }
 
   private void paddleMovementP1() {

@@ -20,6 +20,7 @@ public void draw() {
   ball.draw();
   scoreBoard.draw();
   paddle.draw();
+
   paddleMoveB();
   paddleMoveR();
 }

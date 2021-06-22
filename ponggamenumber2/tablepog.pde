@@ -4,7 +4,7 @@ public class TablePog {
   private int RectWidth = 100;
   private int Rectheight = 30;
   private int RectPointX = 960;
-  TablePog(int displayWidth, int displayHeight ) {
+  public TablePog(int displayWidth, int displayHeight ) {
   }
   /*void geometryCheck(int displayWidth, int displayHeight) {
    if (displayWidth >= displayHeight) {
