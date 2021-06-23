@@ -1,16 +1,17 @@
-final private void paddleMoveB () {
+
+public void paddleMoveB () {
   if (keys[0] == true) {
-    paddle.paddleMovementP1();
+    leftPaddle.paddleMovementP1();
   }
   if (keys[1] == true) {
-    paddle.paddleMovementP2();
+    leftPaddle.paddleMovementP2();
   }
 }
-final private void paddleMoveR () {
+public void paddleMoveR () {
   if (keys[2] == true) {
-    paddle.paddleMovementP3();
+    rightPaddle.paddleMovementP1();
   }
   if (keys[3] == true) {
-    paddle.paddleMovementP4();
+    rightPaddle.paddleMovementP2();
   }
 }

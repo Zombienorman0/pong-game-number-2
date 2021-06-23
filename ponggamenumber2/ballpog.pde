@@ -96,7 +96,7 @@ public class BallPog {//ball variable
   public int xDirection_getter () {
     return xDirection;
   }// end getter
-    public int xDirection1_getter () {
+  public int xDirection1_getter () {
     return xDirection1;
   }// end getter
   public float x_getter () {
@@ -117,5 +117,4 @@ public class BallPog {//ball variable
   public float diameterXt_getter () {
     return diameterXt;
   }// end getter
-  
 }

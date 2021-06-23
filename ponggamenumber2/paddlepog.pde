@@ -1,75 +1,61 @@
-public class PaddlePog { //<>//
-  private float paddleY, paddleY1, PaddleX1, paddleX2, paddleSizeX, paddleSizeY, paddleSpeed;// paddle variables
- 
+public class PaddlePog extends Shape { //<>//
+  private float  paddleSizeX, paddleSizeY, paddleSpeed;// paddle variables
+  color colour;
   //change speed every game
-  private float xSpeed = 3.3;
+  //private float xSpeed = 3.3;
   private float xSpeed1 = 3;
-  public PaddlePog (int displayWidth, int displayHeight) {
-    
-    
-    paddleSizeY = 200;
-    this.paddleY = displayHeight/2 -paddleSizeY/2;
-    this.paddleY1 = paddleY;
-    this.PaddleX1 = 35;
-    this.paddleX2 = 1855;
-    paddleSizeX = 30;
+  public  PaddlePog (float xD, float yD, color c) {
+    super(xD, yD);
+    this.colour = c;
+    this.paddleSizeY = 200;
+    this.paddleSizeX = 30;
     paddleSpeed = 5;
-    
   }
-  public void draw() { 
+  void draw() { 
     paddleDesign();
-    ballPaddleBounce();
   }
 
   public void ballPaddleBounce() {
     ball.x = ball.x - ( xSpeed1 * ball.xDirection_getter() );
-    if ( ball.x < PaddleX1 +ball.diameterX && ball.y > paddleY && ball.y < paddleY+ paddleSizeY || ball.x >  paddleX2 - ball.diameterX/2&& ball.y > paddleY1 && ball.y < paddleY1+ paddleSizeY ) {//blue side WIP || red side WIP
+    if ( ball.x < xD +ball.diameterX && ball.y > yD && ball.y < yD+ paddleSizeY  ) {//blue side WIP || red side WIP
       ball.xDirection  *= +- 1;
-    }    
-    ball.xt = ball.xt + ( xSpeed * ball.xDirection_getter() );
-    if ( ball.xt < PaddleX1 +ball.diameterXt && ball.yt > paddleY && ball.yt < paddleY+ paddleSizeY || ball.xt >  paddleX2 - ball.diameterXt/2&& ball.yt > paddleY1 && ball.yt < paddleY1+ paddleSizeY ) {//blue side WIP || red side WIP
+    }
+    ball.xt = ball.xt + ( xSpeed1 * ball.xDirection_getter() );
+    if ( ball.xt < xD +ball.diameterXt && ball.yt > yD && ball.yt < yD+ paddleSizeY   ) {//blue side WIP || red side WIP, 
       ball.xDirection1 *= +- 1;
     }
   }
+  public void ballPaddleBounce1() {
+    ball.x = ball.x - ( xSpeed1 * ball.xDirection_getter() );
+    if ( ball.x >  xD - ball.diameterX/2&& ball.y > yD && ball.y < yD+ paddleSizeY ) {//blue side WIP || red side WIP
+      ball.xDirection  *= +- 1;
+    }
+    ball.xt = ball.xt + ( xSpeed1 * ball.xDirection_getter() );
+    if ( ball.xt >  xD - ball.diameterXt/2&& ball.yt > yD && ball.yt < yD+ paddleSizeY ) {//blue side WIP || red side WIP
+      ball.xDirection  *= +- 1;
+    }
+  }
+
   private void paddleDesign() {
-    fill(#13589B);
+    fill(colour);
     paddleB();
-    noFill();
-    fill(#AF1320);
-    paddleR();
     noFill();
     noStroke();
     // ballPaddleBounce();
   } 
   final private  void paddleB () {
-    rect (PaddleX1, paddleY, paddleSizeX, paddleSizeY);
+    rect (xD, yD, paddleSizeX, paddleSizeY);
   }
-  final private void paddleR () {
-    rect (paddleX2, paddleY1, paddleSizeX, paddleSizeY);
-  }
-
-  private void paddleMovementP1() {
-    paddleY-= paddleSpeed;
-    if ( paddleY <= 0) {
-      paddleY = 0;
+  void paddleMovementP1() {
+    yD-= paddleSpeed;
+    if ( yD <= 0) {
+      yD = 0;
     }
   }
-  private void paddleMovementP2() {
-    paddleY+= paddleSpeed;
-    if ( paddleY >= 1080 - paddleSizeY) {
-      paddleY = 1080 - paddleSizeY;
-    }
-  }
-  private void paddleMovementP3() {
-    paddleY1-= paddleSpeed;
-    if ( paddleY1 <= 0) {
-      paddleY1 = 0;
-    }
-  }
-  private void paddleMovementP4() {
-    paddleY1+= paddleSpeed;
-    if ( paddleY1 >= 1080 - paddleSizeY) {
-      paddleY1 = 1080 - paddleSizeY;
+  void paddleMovementP2() {
+    yD+= paddleSpeed;
+    if ( yD >= 1080 - paddleSizeY) {
+      yD = 1080 - paddleSizeY;
     }
   }
 }
