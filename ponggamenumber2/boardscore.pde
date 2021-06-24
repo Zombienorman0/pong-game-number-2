@@ -16,7 +16,8 @@ private class boardScore {
   final private void retsrtgame() {
     if (key == 'l' || key == 'L') {
       loop();
-      ball = new BallPog(displayWidth, displayHeight);
+      ball = new BallPog(displayWidth/2, displayHeight/2, displayHeight/20, #A20BA2);
+      extraBall = new BallPog(displayWidth/2, displayHeight/2, displayHeight/20, #D538D6);
       PogTable = new TablePog(displayWidth, displayHeight);
       scoreBoard = new boardScore(displayWidth, displayHeight);
       score[0] = 0;

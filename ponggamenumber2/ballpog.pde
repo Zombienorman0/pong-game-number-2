@@ -1,62 +1,56 @@
-public class BallPog {//ball variable
-  private color ballColour = #A20BA2;
+public class BallPog extends Shape {//ball variable
+  private color c;
+  private float radius;
 
   //change speed every game
   private float ySpeed = 2.8;
-  private float ySpeed1 = 3.5;
   private int xDirection = 1;
   private int yDirection = 1;
   private int xDirection1 = -1;
-  private int yDirection1 = -1;
   private color DG = #054309;
   private color G = #2AD833;
-  private float x, y, diameterX, xt, yt, diameterXt;
 
-  public BallPog(int displayWidth, int displayHeight) {
-    this.x = displayWidth/2;
-    this.y = displayHeight/2;
-    this.diameterX = displayHeight/20;
-    this.xt = x;
-    this.yt = y;
-    this.diameterXt = diameterX;
+
+  public BallPog(float xD, float yD, float radius, color c) {
+    super(xD, yD);
+    this.radius = radius;
+    this.c = c;
   } // end consturctor
 
-  private void draw() {
+  void draw() {
     scorescore();
     ballers();
-    extraBall ();
+    extraBall();
     actualScore();
     actualScore2();
   }
 
   private void ballers() {
-    fill(ballColour);
-    ellipse(x, y, diameterX, diameterX);
+    fill(c);
+    ellipse(xD, yD, radius, radius);
     stroke(0);
     noStroke();
     movement();
+    leftPaddle.ballPaddleBounce();
+    rightPaddle.ballPaddleBounce1();
   }
   private void extraBall () {
     if (keys[6] == true) {
-      fill(ballColour);
-      ellipse(xt, yt, diameterXt, diameterXt);
+      fill(c);
+      ellipse(xD, yD, radius, radius);
       stroke(0);
       noStroke();
-      movement2();
+      movement();
+      leftPaddle.ballPaddleBounce();
+      rightPaddle.ballPaddleBounce1();
     }
   }
 
   private void movement() {
-    y = y + ( ySpeed * yDirection );
+    yD = yD + ( ySpeed * yDirection );
 
-    if (y > displayHeight - diameterX/2|| y < diameterX -20) {
+    if (yD > displayHeight - radius|| yD < radius -20) {
       yDirection *= +-1;
-    }
-  }
-  private void movement2() {
-    yt = yt - ( ySpeed1 * yDirection1);
-    if (yt > displayHeight - diameterXt/2|| yt < diameterXt -20) {
-      yDirection1 *= +-1;
     }
   }
 
@@ -67,9 +61,10 @@ public class BallPog {//ball variable
     textSize(50);
     text("Practice", 300, 100);
     noFill();
-    if (x < diameterX -20) {
-      ball = new BallPog(displayWidth, displayHeight);
-    } else if (x > displayWidth - diameterX/2) {//x > displayWidth - diameterX/2
+    if (xD < radius -20) {
+      ball = new BallPog(displayWidth/2, displayHeight/2, displayHeight/20, #A20BA2);
+      extraBall = new BallPog(displayWidth/2, displayHeight/2, displayHeight/20, #D538D6);
+    } else if (xD > displayWidth - radius/2) {//x > displayWidth - diameterX/2
       xDirection *= +-1;
     }
     if (keys[4] == true) {
@@ -78,11 +73,13 @@ public class BallPog {//ball variable
       textSize(50);
       text("Multiplayer", 1400, 100);
       noFill();
-      if (x < diameterX -20) {
-        ball = new BallPog(displayWidth, displayHeight); 
+      if (xD < radius -20) {
+        ball = new BallPog(displayWidth/2, displayHeight/2, displayHeight/20, #A20BA2);
+        extraBall = new BallPog(displayWidth/2, displayHeight/2, displayHeight/20, #D538D6); 
         score[1] += 1;
-      } else if (x > displayWidth - diameterX/2) {//x > displayWidth - diameterX/2
-        ball = new BallPog(displayWidth, displayHeight);  
+      } else if (xD > displayWidth - radius/2) {//x > displayWidth - diameterX/2
+        ball = new BallPog(displayWidth/2, displayHeight/2, displayHeight/20, #A20BA2);
+        extraBall = new BallPog(displayWidth/2, displayHeight/2, displayHeight/20, #D538D6);  
         score[0] += 1;
       }
     }
@@ -99,22 +96,13 @@ public class BallPog {//ball variable
   public int xDirection1_getter () {
     return xDirection1;
   }// end getter
-  public float x_getter () {
-    return x;
+  public float xD_getter () {
+    return xD;
   }// end getter
-  public float y_getter () {
-    return y;
+  public float yD_getter () {
+    return yD;
   }// end getter
-  public float diameterX_getter () {
-    return diameterX;
-  }// end getter
-  public float xt_getter () {
-    return xt;
-  }// end getter
-  public float yt_getter () {
-    return yt;
-  }// end getter
-  public float diameterXt_getter () {
-    return diameterXt;
+  public float radius_getter () {
+    return radius;
   }// end getter
 }

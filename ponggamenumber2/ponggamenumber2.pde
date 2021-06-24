@@ -1,4 +1,5 @@
 public BallPog ball;
+public BallPog extraBall;
 public TablePog PogTable;
 public PaddlePog leftPaddle;
 public PaddlePog rightPaddle;
@@ -11,7 +12,8 @@ public void setup() {
   noStroke();
   //PogTable.geometryCheck(displayWidth, displayHeight);
   PogTable = new TablePog( displayWidth, displayHeight);
-  ball = new BallPog(displayWidth, displayHeight);
+  ball = new BallPog(displayWidth/2, displayHeight/2, displayHeight/20, #A20BA2);
+  extraBall = new BallPog(displayWidth/2, displayHeight/2, displayHeight/20, #D538D6);
   leftPaddle = new PaddlePog (35, displayHeight/2 -200/2, #13589B);
   rightPaddle = new PaddlePog (1855, displayHeight/2 -200/2, #AF1320);
   scoreBoard = new boardScore(displayWidth, displayHeight);
@@ -30,6 +32,7 @@ void draw() {
 
   leftPaddle.ballPaddleBounce();
   rightPaddle.ballPaddleBounce1();
+  
 
   for (int i=0; i<shapes.size(); i++) {
     shapes.get(i).draw();
