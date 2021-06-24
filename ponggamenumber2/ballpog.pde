@@ -1,9 +1,10 @@
 public class BallPog extends Shape {//ball variable
   private color c;
   private float radius;
+  private float xSpeed = 2;
+  private float ySpeed = 4;
 
   //change speed every game
-  private float ySpeed = 2.8;
   private int xDirection = 1;
   private int yDirection = 1;
   private int xDirection1 = -1;
@@ -104,5 +105,8 @@ public class BallPog extends Shape {//ball variable
   }// end getter
   public float radius_getter () {
     return radius;
+  }// end getter
+  public float xSpeed_getter () {
+    return xSpeed;
   }// end getter
 }

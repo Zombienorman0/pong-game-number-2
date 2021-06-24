@@ -32,7 +32,7 @@ void draw() {
 
   leftPaddle.ballPaddleBounce();
   rightPaddle.ballPaddleBounce1();
-  
+
 
   for (int i=0; i<shapes.size(); i++) {
     shapes.get(i).draw();

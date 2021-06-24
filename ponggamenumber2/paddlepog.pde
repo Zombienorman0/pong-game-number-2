@@ -2,8 +2,6 @@ public class PaddlePog extends Shape { //<>//
   private float  paddleSizeX, paddleSizeY, paddleSpeed;// paddle variables
   private color colour;
   //change speed every game
-  //private float xSpeed = 3.3;
-  private float xSpeed1 = 1;
   public  PaddlePog (float xD, float yD, color c) {
     super(xD, yD);
     this.colour = c;
@@ -16,13 +14,13 @@ public class PaddlePog extends Shape { //<>//
   }
 
   public void ballPaddleBounce() {
-    ball.xD = ball.xD - ( xSpeed1 * ball.xDirection_getter() );
+    ball.xD = ball.xD - ( ball.xSpeed * ball.xDirection_getter() );
     if ( ball.xD < xD +ball.radius && ball.yD > yD && ball.yD < yD+ paddleSizeY  ) {//blue side WIP || red side WIP
       ball.xDirection  *= +- 1;
-    } 
+    }
   }
   public void ballPaddleBounce1() {
-    ball.xD = ball.xD - ( xSpeed1 * ball.xDirection_getter() );
+    ball.xD = ball.xD - ( ball.xSpeed * ball.xDirection_getter() );
     if ( ball.xD >  xD - ball.radius/2&& ball.yD > yD && ball.yD < yD+ paddleSizeY ) {//blue side WIP || red side WIP
       ball.xDirection  *= +- 1;
     }
